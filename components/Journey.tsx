@@ -72,11 +72,16 @@ export function Journey() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const section = sectionRef.current;
-    if (!canvas || !section) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const canvasEl = canvasRef.current;
+    const sectionEl = sectionRef.current;
+    if (!canvasEl || !sectionEl) return;
+    const context = canvasEl.getContext("2d");
+    if (!context) return;
+
+    // Non-null aliases so the hoisted helper functions below type-check.
+    const canvas: HTMLCanvasElement = canvasEl;
+    const section: HTMLElement = sectionEl;
+    const ctx: CanvasRenderingContext2D = context;
 
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
