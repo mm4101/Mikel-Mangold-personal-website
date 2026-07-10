@@ -15,7 +15,7 @@ export function Hero() {
       <div className="mt-10 flex flex-wrap gap-3">
         <a
           href={hero.ctaPrimary.href}
-          className="inline-block px-6 py-3 bg-ink text-paper rounded-full font-medium hover:opacity-90 transition"
+          className="inline-block px-6 py-3 bg-accent text-paper rounded-full font-medium hover:opacity-90 transition"
         >
           {hero.ctaPrimary.label}
         </a>

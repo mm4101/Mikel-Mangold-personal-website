@@ -5,9 +5,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0f0f0f",
-        paper: "#fafaf7",
-        accent: "#3b82f6",
+        // Branding from mikelmangold.com — gold accent on near-black
+        ink: "#f5f5f3", // primary text (light, on dark)
+        paper: "#0a0a0a", // page background (near-black)
+        accent: "#c8a951", // brand gold
       },
       fontFamily: {
         sans: ["ui-sans-serif", "system-ui", "sans-serif"],
