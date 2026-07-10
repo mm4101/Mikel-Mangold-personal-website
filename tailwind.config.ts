@@ -11,7 +11,7 @@ const config: Config = {
         accent: "#c8a951", // brand gold
       },
       fontFamily: {
-        sans: ["ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-ibm-plex-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
     },
   },

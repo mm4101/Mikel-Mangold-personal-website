@@ -93,7 +93,7 @@ export const skills = {
     },
     {
       label: "Systems & Ops",
-      items: ["HubSpot CRM", "Pipeline & KPI tracking", "Introw", "Sales enablement", "Open innovation"],
+      items: ["HubSpot", "Clay", "Claude", "Smartlead", "Closelyhq", "Surfe", "PandaDoc", "Notion"],
     },
     {
       label: "Domains",
@@ -129,6 +129,47 @@ export const contact = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/mikelmangold" },
     { label: "Website", href: "https://mikelmangold.com" },
   ],
+};
+
+export const book = {
+  heading: "My Book",
+  title: "Today's Superpower — Building Networks",
+  subtitle: "7 Mindsets & Principles to Thrive in a Fast-Changing World",
+  cover: "/book-cover.png",
+  description:
+    "A playbook for building ecosystems of ideas, resources, and people in the startup and multi-stakeholder economy. Packed with frameworks for anyone who wants to create partnerships and alliances that generate lasting growth.",
+  pullQuote:
+    "A balanced mixture of hard science, soft skills, and bold speculation — the definitive guide to both the present and the future of our economy.",
+  praiseHeading: "Praise from",
+  praise: [
+    "Greg Satell",
+    "Charlene Li",
+    "Keith Ferrazzi",
+    "Susan Windham-Bannister",
+    "Frank Kumli",
+    "Ian Hathaway",
+  ],
+  // Homepage "My Book" section CTA now opens the dedicated book page below.
+  cta: { label: "Read more about the book", href: "/book" },
+
+  // Full content for the dedicated /book page (recreated from mikelmangold.com/book).
+  page: {
+    intro: [
+      "Change happens when people with a collaborative and ecosystem mindset are plugged into the right networks. This book discusses seven mindset principles enabling the reader to thrive in the startup and multi-stakeholder economy by building and growing networks of ideas and knowledge, networks of resources such as capital and infrastructure, and networks of people to join your mission.",
+      "Most people think change comes from a top-down approach, where the people in the middle and the bottom don't have much power to effect change. In Today's Superpower – Building Networks: 7 Mindset Principles to Thrive in a Fast-Changing World, Mikel Mangold challenges this common-held belief — showing that anyone can drive a transformation — answering questions like:",
+    ],
+    questions: [
+      "What is a startup ecosystem?",
+      "Why should I care about the new economy?",
+      "How can I be successful in this fast-changing world?",
+      "And more…",
+    ],
+    readMore: {
+      label: "Read more about it",
+      href: "https://mikelmangold.com/3networkstochangetheworld/",
+    },
+    order: { label: "Get your copy", href: "/#contact" },
+  },
 };
 
 export const meta = {
