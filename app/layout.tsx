@@ -13,8 +13,30 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mikelmangold.com"),
   title: meta.title,
   description: meta.description,
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: "https://mikelmangold.com",
+    siteName: meta.title,
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 799,
+        alt: "Mikel Mangold",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: meta.title,
+    description: meta.description,
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
