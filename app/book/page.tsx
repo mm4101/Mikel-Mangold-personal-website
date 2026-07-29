@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { book } from "../../content";
 
 export const metadata: Metadata = {
-  title: `${book.title} — Mikel Mangold`,
+  title: `${book.title} - Mikel Mangold`,
   description: book.description,
 };
 
@@ -57,7 +57,7 @@ export default function BookPage() {
           <ul className="mt-2 mb-8 space-y-2">
             {book.page.questions.map((q) => (
               <li key={q} className="flex gap-3 text-ink/85">
-                <span className="text-accent">—</span>
+                <span className="text-accent">-</span>
                 <span>{q}</span>
               </li>
             ))}
@@ -94,6 +94,32 @@ export default function BookPage() {
           </div>
         </div>
       </div>
+
+      {/* Podcast video */}
+      <section className="mt-16 border-t border-ink/10 pt-10">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+          {book.page.podcast.heading}
+        </h2>
+        <p className="mt-3 text-ink/70 max-w-2xl">{book.page.podcast.caption}</p>
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
+          {book.page.podcast.videos.map((video) => (
+            <figure key={video.youtubeId}>
+              <div className="aspect-video w-full overflow-hidden rounded-lg ring-1 ring-ink/10 shadow-2xl shadow-black/60">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <figcaption className="mt-3 text-sm text-ink/70">
+                {video.title}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
 
       <footer className="mt-16 border-t border-ink/10 pt-8 text-sm text-ink/50">
         <a href="/" className="hover:text-accent transition">

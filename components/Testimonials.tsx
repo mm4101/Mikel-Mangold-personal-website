@@ -14,7 +14,18 @@ export function Testimonials() {
               &ldquo;{q.text}&rdquo;
             </blockquote>
             <figcaption className="mt-4 text-sm">
-              <span className="font-medium">{q.author}</span>
+              {q.linkedin ? (
+                <a
+                  href={q.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-accent hover:underline"
+                >
+                  {q.author}
+                </a>
+              ) : (
+                <span className="font-medium">{q.author}</span>
+              )}
               <span className="text-ink/60"> · {q.role}</span>
             </figcaption>
           </figure>

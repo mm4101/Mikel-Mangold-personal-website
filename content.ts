@@ -107,15 +107,31 @@ export const testimonials = {
   quotes: [
     {
       text:
-        "Add a real recommendation here - you have several on your LinkedIn profile. Copy your favourite quote in, along with the person's name and title.",
-      author: "A colleague or partner",
-      role: "Their title, Company",
+        "Mikel was instrumental in opening new markets - most notably the United States and India - and he did it the right way: on the ground, meeting stakeholders, visiting customer sites, and listening deeply until he understood the customer's real pain points. I recommend him warmly and without reservation.",
+      author: "Dr. Tom Walsh",
+      role: "Board Member & Chair of the Advisory Board, ATLANT 3D · Former CEO of NEXX Systems (acquired by Tokyo Electron)",
+      linkedin: "https://www.linkedin.com/in/tom-walshphd/",
     },
     {
       text:
-        "A second recommendation works well here. Pick one that speaks to how you build commercial traction and relationships.",
-      author: "An investor or founder",
-      role: "Their title, Company",
+        "He is without a doubt the most motivated, persistent and interested intern I ever had. He is curious, driven, and has a lot of energy that he puts to work to engage with stakeholders on all levels and to learn. I can highly recommend him.",
+      author: "Dirk Schapeler",
+      role: "President, Business Creation Company, NGK/NTK",
+      linkedin: "https://www.linkedin.com/in/dhealthinno/",
+    },
+    {
+      text:
+        "Mikel is VERY passionate about innovation and brought so much energy and great ideas to our group. He is a professional networker who uses the power of communication and collaboration to accelerate outcomes. I have no doubt that Mikel will be a future global, empathetic and disruptive leader. I highly recommend him!",
+      author: "Christopher A. Haskell",
+      role: "Executive Leader & Biotech Advisor, Bayer CoLaborator",
+      linkedin: "https://www.linkedin.com/in/haskell/",
+    },
+    {
+      text:
+        "Mikel is an energetic and enthusiastic individual who understands and helped to shape our strategy. He has deep insights into how to communicate effectively using a broad variety of platforms. I would recommend Mikel for strategy and communications.",
+      author: "Jay Wadia",
+      role: "Director, External Innovation & Scientific Licensing, Ferring Pharmaceuticals",
+      linkedin: "https://www.linkedin.com/in/jaywadia/",
     },
   ],
 };
@@ -169,6 +185,27 @@ export const book = {
       href: "https://mikelmangold.com/3networkstochangetheworld/",
     },
     order: { label: "Get your copy", href: "/#contact" },
+    podcast: {
+      heading: "Watch the podcasts",
+      caption:
+        "Talks and conversations on building networks, partnerships, and innovation ecosystems - the ideas behind Today's Superpower: Building Networks.",
+      videos: [
+        {
+          youtubeId: "36NPq_rv-MM",
+          title:
+            "Today's Superpower: Building Networks - Why and how to build your business ecosystem",
+        },
+        {
+          youtubeId: "fsuPN9gCpM0",
+          title: "Guide for Startups: How to Partner",
+        },
+        {
+          youtubeId: "JflAgQVgzwA",
+          title:
+            "The Innovation Room E09 - The Power of Networks and Innovation Ecosystems",
+        },
+      ],
+    },
   },
 };
 
