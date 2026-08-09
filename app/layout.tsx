@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { IBM_Plex_Sans } from "next/font/google";
 import { meta } from "../content";
 import { MoleculeBackground } from "../components/MoleculeBackground";
@@ -50,6 +51,11 @@ export default function RootLayout({
         <MoleculeBackground />
         <SunsetOrb />
         {children}
+        <Script
+          id="hs-script-loader"
+          src="https://js-eu1.hs-scripts.com/26784569.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
