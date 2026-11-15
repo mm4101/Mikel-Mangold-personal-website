@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 // A scroll-driven, cinematic "life journey" section. Four full-screen chapters
-// — Freiburg → San Francisco → Düsseldorf → Berlin — rendered on a pinned
+// - Freiburg → San Francisco → Düsseldorf → Berlin - rendered on a pinned
 // canvas that pans city to city as you scroll, each with its own sunset hue,
 // a glowing waypoint, an animated route, and drifting embers. Text overlays
 // (crisp DOM, not canvas) fade in per chapter.
@@ -20,47 +20,47 @@ type City = {
 const CITIES: City[] = [
   {
     name: "Freiburg",
-    years: "2015 — 2018",
+    years: "2015 - 2018",
     company: "University of Freiburg",
     chapter: "The foundation",
     blurb:
-      "M.Sc in Chemistry at the University of Freiburg — where the scientific foundation for everything that followed was laid.",
+      "M.Sc in Chemistry at the University of Freiburg - where the scientific foundation for everything that followed was laid.",
     color: [255, 202, 112],
   },
   {
     name: "Zurich",
-    years: "2017 — 2018",
+    years: "2017 - 2018",
     company: "Empa",
     chapter: "Into the lab",
     blurb:
-      "Master's thesis research at Empa — polymer chemistry and materials science: artificial muscles, thin films, and the science underneath everything I do.",
+      "Master's thesis research at Empa - polymer chemistry and materials science: artificial muscles, thin films, and the science underneath everything I do.",
     color: [255, 168, 82],
   },
   {
     name: "San Francisco",
-    years: "2019 — 2020",
+    years: "2019 - 2020",
     company: "Bayer",
     chapter: "Crossing over",
     blurb:
-      "Bayer's CoLaborator biotech incubator and G4A digital-health accelerator in Silicon Valley — from the lab bench to building business.",
+      "Bayer's CoLaborator biotech incubator and G4A digital-health accelerator in Silicon Valley - from the lab bench to building business.",
     color: [255, 108, 92],
   },
   {
     name: "Düsseldorf",
-    years: "2021 — 2022",
+    years: "2021 - 2022",
     company: "Niterra",
     chapter: "Building ventures",
     blurb:
-      "Venture building at Niterra's Venture Lab — creating companies from zero, including one exit (Nanell).",
+      "Venture building at Niterra's Venture Lab - creating companies from zero, including one exit (Nanell).",
     color: [214, 94, 178],
   },
   {
     name: "Berlin",
-    years: "2023 — 2026",
-    company: "Niterra · CyberProtonics (pre-seed) · ATLANT 3D (Series A)",
+    years: "2023 - 2026",
+    company: "Niterra · CyberProtonics (pre-seed) · ATLANT 3D (Series A) · Fraunhofer HHI",
     chapter: "Now",
     blurb:
-      "Venture building at Niterra, early-stage BD at CyberProtonics (pre-seed), and now leading BD & Channel Partnerships at ATLANT 3D (Series A) — turning deep tech into commercial traction.",
+      "Venture building at Niterra, early-stage BD at CyberProtonics (pre-seed), BD & Channel Partnerships at ATLANT 3D (Series A), and now venture building in photonics at Fraunhofer HHI - turning deep tech into commercial traction.",
     color: [150, 122, 255],
   },
 ];
@@ -210,7 +210,7 @@ export function Journey() {
         ctx.stroke();
       }
 
-      // City nodes — the active one is large and pulsing.
+      // City nodes - the active one is large and pulsing.
       for (let i = 0; i < n; i++) {
         const pos = nodePos(i, p);
         const closeness = 1 / (1 + Math.abs(i - p) * 1.4);
@@ -282,7 +282,7 @@ export function Journey() {
           </p>
         </div>
 
-        {/* Chapter text — all stacked, only the active one shown */}
+        {/* Chapter text - all stacked, only the active one shown */}
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="relative max-w-xl w-full text-center">
             {CITIES.map((c, i) => (

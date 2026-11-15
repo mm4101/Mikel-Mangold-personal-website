@@ -5,6 +5,7 @@ import { IBM_Plex_Sans } from "next/font/google";
 import { meta } from "../content";
 import { MoleculeBackground } from "../components/MoleculeBackground";
 import { SunsetOrb } from "../components/SunsetOrb";
+import { Nav } from "../components/Nav";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -46,10 +47,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${ibmPlexSans.variable}`}>
+    <html lang="en" className={`scroll-smooth scroll-pt-16 ${ibmPlexSans.variable}`}>
       <body className="font-sans antialiased">
         <MoleculeBackground />
         <SunsetOrb />
+        <Nav />
         {children}
         <Script
           id="hs-script-loader"

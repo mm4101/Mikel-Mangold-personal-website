@@ -13,7 +13,16 @@ export function Testimonials() {
             <blockquote className="text-ink/85 leading-relaxed">
               &ldquo;{q.text}&rdquo;
             </blockquote>
-            <figcaption className="mt-4 text-sm">
+            <figcaption className="mt-5 flex items-center gap-4 text-sm">
+              {q.photo && (
+                <img
+                  src={q.photo}
+                  alt={`Photo of ${q.author}`}
+                  loading="lazy"
+                  className="h-14 w-14 shrink-0 rounded-full object-cover ring-2 ring-accent/50"
+                />
+              )}
+              <div>
               {q.linkedin ? (
                 <a
                   href={q.linkedin}
@@ -27,6 +36,10 @@ export function Testimonials() {
                 <span className="font-medium">{q.author}</span>
               )}
               <span className="text-ink/60"> · {q.role}</span>
+              {q.date && (
+                <span className="mt-1 block text-xs text-ink/45">{q.date}</span>
+              )}
+              </div>
             </figcaption>
           </figure>
         ))}

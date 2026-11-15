@@ -19,6 +19,9 @@ export function Projects() {
             {p.link && (
               <a
                 href={p.link.href}
+                {...(p.link.href.startsWith("http")
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
               >
                 {p.link.label} →

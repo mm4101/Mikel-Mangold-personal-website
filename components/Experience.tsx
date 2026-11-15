@@ -7,7 +7,19 @@ export function Experience() {
       <ol className="space-y-8">
         {experience.roles.map((role, i) => (
           <li key={i} className="grid md:grid-cols-[160px_1fr] gap-4 md:gap-8">
-            <p className="text-sm text-ink/60 font-medium pt-1">{role.period}</p>
+            <div>
+              <p className="text-sm text-ink/60 font-medium pt-1">{role.period}</p>
+              {role.stage && (
+                <div className="mt-3 rounded-lg border border-accent/40 bg-accent/10 px-3 py-2.5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent leading-snug">
+                    {role.stage.label}
+                  </p>
+                  <p className="mt-1 text-xs text-ink/65 leading-snug">
+                    {role.stage.detail}
+                  </p>
+                </div>
+              )}
+            </div>
             <div>
               <h3 className="font-medium text-lg">
                 {role.title} <span className="text-ink/60">· {role.company}</span>

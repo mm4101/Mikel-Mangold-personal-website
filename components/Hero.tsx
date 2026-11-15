@@ -16,9 +16,31 @@ export function Hero() {
     "linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0) 55%)";
 
   return (
-    <section className="relative flex min-h-[600px] flex-col justify-center overflow-hidden md:min-h-[560px]">
-      {/* Portrait — embedded background behind the text */}
-      <div className="pointer-events-none absolute inset-0">
+    <section className="relative flex flex-col overflow-hidden md:min-h-[560px] md:justify-center">
+      {/* Phones: portrait as its own band at the top, cropped so the whole
+          face is in frame, fading into the page below. */}
+      <div className="relative h-[400px] md:hidden">
+        <img
+          src="/portrait-mobile.jpg"
+          alt="Portrait of Mikel Mangold"
+          className="h-full w-full object-cover object-[center_12%]"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0) 45%), linear-gradient(to right, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0) 55%)",
+          }}
+        />
+        <img
+          src="/logo-white.png"
+          alt="Mikel Mangold"
+          className="absolute left-6 top-8 h-12 w-auto"
+        />
+      </div>
+
+      {/* Desktop: portrait embedded as a background behind the text */}
+      <div className="pointer-events-none absolute inset-0 hidden md:block">
         <img
           src="/portrait.jpg"
           alt="Portrait of Mikel Mangold"
@@ -29,12 +51,12 @@ export function Hero() {
         <div className="absolute inset-0" style={{ background: bottomScrim }} />
       </div>
 
-      <div className="relative mx-auto w-full max-w-3xl px-6 pt-12 pb-16 md:pt-16 md:pb-24">
-        {/* White logo, top of the page */}
+      <div className="relative mx-auto -mt-6 w-full max-w-3xl px-6 pb-14 md:mt-0 md:pt-16 md:pb-24">
+        {/* White logo, top of the page (on phones it sits on the photo above) */}
         <img
           src="/logo-white.png"
           alt="Mikel Mangold"
-          className="mb-10 h-12 w-auto md:mb-14 md:h-14"
+          className="hidden md:mb-14 md:block md:h-14 md:w-auto"
         />
 
         {/* Text — overlaid on the embedded portrait */}
@@ -42,11 +64,23 @@ export function Hero() {
           <p className="text-sm font-medium uppercase tracking-wider text-accent">
             {hero.role} · {hero.location}
           </p>
-          <h1 className="mt-3 text-5xl md:text-6xl font-bold tracking-tight">
+          <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
             Hi, I&apos;m <span className="text-accent">{hero.name}</span>
           </h1>
-          <p className="mt-6 text-xl text-ink/75 leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-ink/75 leading-relaxed">
             {hero.headline}
+          </p>
+          <p className="mt-4 text-lg md:text-xl text-ink/75 leading-relaxed">
+            {hero.dayNight.before}
+            <a
+              href={hero.dayNight.linkHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 hover:decoration-accent"
+            >
+              {hero.dayNight.linkLabel}
+            </a>
+            {hero.dayNight.after}
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
