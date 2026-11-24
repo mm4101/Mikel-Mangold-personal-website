@@ -436,3 +436,16 @@ export const meta = {
   title: "Mikel Mangold - Entrepreneur & Commercial GTM Leader",
   description: "Berlin-based entrepreneur turning deep tech into commercial traction. Currently a venture builder at Fraunhofer HHI, working on photonics and semiconductors.",
 };
+
+// "Special Event" banner shown on the home page right under the hero.
+// To hide it after the event, set `show` to false.
+export const specialEvent = {
+  show: true,
+  badge: "Special Event · Coming up soon",
+  title: "Is Your Outbound Approach Ready for 2027?",
+  date: "Tuesday, December 8, 2026 · 20:00 Berlin time",
+  description:
+    "Most outbound fails in one of three places: a list full of bounces and wrong-fit accounts, copy that is obviously templated, or no system behind it. Join me live and get your outbound ready for 2027.",
+  lumaEventId: "evt-wujvNZfK9DFVuFA",
+  ctaLabel: "Register for Event",
+};

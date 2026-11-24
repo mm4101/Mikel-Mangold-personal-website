@@ -1,4 +1,5 @@
 import { Hero } from "../components/Hero";
+import { SpecialEvent } from "../components/SpecialEvent";
 import { About } from "../components/About";
 import { Journey } from "../components/Journey";
 import { Experience } from "../components/Experience";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
 
       <main className="mx-auto max-w-3xl px-6">
+        <SpecialEvent />
         <About />
       </main>
 
